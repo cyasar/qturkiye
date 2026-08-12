@@ -30,6 +30,12 @@ const PresentationShell: React.FC = () => {
 
   return (
     <div className="presentation-shell">
+      {/* Universal Watermark Logo */}
+      <div style={{ position: 'absolute', top: '2rem', right: '3rem', display: 'flex', alignItems: 'center', gap: '1rem', opacity: 0.5, zIndex: 50, pointerEvents: 'none' }}>
+        <img src={`${import.meta.env.BASE_URL}logo_qturkiye.png`} alt="QTürkiye" style={{ height: '40px', objectFit: 'contain', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }} />
+        <span style={{ fontSize: '1.2rem', fontWeight: 600, color: '#ffffff', letterSpacing: '0.05em', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>QSummer'2026</span>
+      </div>
+
       {/* Main Slide Area */}
       <div className="slide-viewport">
         <Suspense fallback={<div className="loading">Yükleniyor...</div>}>
