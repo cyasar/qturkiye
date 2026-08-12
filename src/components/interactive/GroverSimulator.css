@@ -1,0 +1,123 @@
+.grover-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.grover-bars {
+  display: flex;
+  justify-content: space-around;
+  height: 350px;
+  padding: 1rem;
+}
+
+.bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  height: 300px;
+  position: relative;
+  background: rgba(255,255,255,0.02);
+  border-radius: 4px;
+}
+
+.bar-half {
+  flex: 1;
+  position: relative;
+  width: 100%;
+}
+
+.positive {
+  display: flex;
+  align-items: flex-end;
+}
+
+.negative {
+  display: flex;
+  align-items: flex-start;
+}
+
+.zero-line {
+  height: 2px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+
+.bar-fill {
+  width: 100%;
+  border-radius: 2px;
+}
+
+.pos-fill {
+  background: var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.neg-fill {
+  background: var(--accent-pink);
+  box-shadow: 0 0 10px var(--accent-pink);
+}
+
+.bar-label {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.grover-message {
+  padding: 1.5rem;
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 4px solid var(--accent-green);
+  border-radius: 4px;
+  font-size: 1.2rem;
+  min-height: 80px;
+}
+
+.grover-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.grover-controls button {
+  padding: 0.75rem 1.5rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border-color);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.grover-controls button:not(:disabled):hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #000;
+}
+
+.grover-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.grover-controls .reset-btn {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: transparent;
+}
+
+.grover-controls .reset-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}

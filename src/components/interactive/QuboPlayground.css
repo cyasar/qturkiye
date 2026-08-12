@@ -1,0 +1,125 @@
+.qubo-container {
+  display: flex;
+  gap: 2rem;
+  height: 500px;
+}
+
+.qubo-sidebar {
+  width: 300px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: auto;
+}
+
+.budget-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.budget-slider label {
+  color: var(--accent-yellow);
+  font-weight: bold;
+}
+
+.budget-slider input {
+  accent-color: var(--primary);
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-editor {
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--primary);
+}
+
+.project-editor .inputs {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.project-editor .inputs div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-editor input[type="number"] {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border-color);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.qubo-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 1rem;
+  background: rgba(0,0,0,0.4);
+  font-weight: bold;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table-body {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  align-items: center;
+}
+
+.table-row:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+.table-row.invalid {
+  opacity: 0.4;
+}
+
+.table-row.valid {
+  color: white;
+}
+
+.table-row.best {
+  background: rgba(16, 185, 129, 0.15);
+  border-left: 4px solid var(--accent-green);
+}
+
+.badge-ok {
+  color: var(--primary);
+}
+.badge-err {
+  color: var(--accent-pink);
+}
+.badge-best {
+  background: var(--accent-green);
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}

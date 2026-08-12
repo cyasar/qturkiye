@@ -1,0 +1,46 @@
+.deep-dive-wrapper {
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.deep-dive-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.deep-dive-header:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-book {
+  color: var(--accent-pink);
+}
+
+.deep-dive-content {
+  overflow: hidden;
+}
+
+.content-inner {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--text-main);
+  font-size: 1.15rem;
+  line-height: 1.6;
+}

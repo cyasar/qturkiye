@@ -1,0 +1,1 @@
+import{i as e,n as t}from"./index-C_yQGa3p.js";import{t as n}from"./Slide-BtPpqmuu.js";e();var r=t(),i=()=>(0,r.jsx)(n,{children:(0,r.jsx)(`h1`,{children:`Slide 16`})});export{i as default};
