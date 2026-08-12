@@ -6,7 +6,7 @@ const Slide01: React.FC = () => {
     <Slide className="text-center" notes="Açılış slaytı. Etkinlik ismi ve konuşmacı bilgisi burada. Yaklaşık 1 dakika ayır.">
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '100%', gap: '4rem', padding: '0 2rem' }}>
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', gap: '1.5rem' }}>
-          <img src="/QSummer26-1600-x-800-px.png" alt="QSummer26 Logo" style={{ maxHeight: '120px', objectFit: 'contain', marginBottom: '1rem', alignSelf: 'flex-start' }} />
+          <img src={`${import.meta.env.BASE_URL}QSummer26-1600-x-800-px.png`} alt="QSummer26 Logo" style={{ maxHeight: '120px', objectFit: 'contain', marginBottom: '1rem', alignSelf: 'flex-start' }} />
           
           <h4 style={{ color: 'var(--accent-pink)', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
             QTürkiye Seminerleri
@@ -26,7 +26,7 @@ const Slide01: React.FC = () => {
         </div>
         
         <div style={{ flex: '0 0 auto', display: 'flex', justifyContent: 'center' }}>
-          <img src="/afis.jpeg" alt="Seminer Afişi" style={{ maxHeight: '600px', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', border: '1px solid var(--border-color)' }} />
+          <img src={`${import.meta.env.BASE_URL}afis.jpeg`} alt="Seminer Afişi" style={{ maxHeight: '600px', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', border: '1px solid var(--border-color)' }} />
         </div>
       </div>
     </Slide>
