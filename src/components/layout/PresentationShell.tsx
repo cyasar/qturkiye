@@ -5,12 +5,21 @@ import { Maximize, Minimize, ChevronLeft, ChevronRight, Menu, X } from 'lucide-r
 import { motion, AnimatePresence } from 'framer-motion';
 import './PresentationShell.css';
 
-// Lazy load slides to improve performance and code splitting
+const slideModules = import.meta.glob('../../slides/*-Slide.tsx');
+
 const slides = Array.from({ length: 35 }, (_, i) => {
   const num = (i + 1).toString().padStart(2, '0');
-  return React.lazy(() => import(`../../slides/${num}-Slide.tsx`).catch(() => ({ 
-    default: () => <div className="slide-placeholder">Slayt {num} Yapım Aşamasında</div> 
-  })));
+  const path = `../../slides/${num}-Slide.tsx`;
+  
+  return React.lazy(() => {
+    const importFn = slideModules[path];
+    if (importFn) {
+      return importFn() as Promise<{ default: React.ComponentType<any> }>;
+    }
+    return Promise.resolve({ 
+      default: () => <div className="slide-placeholder">Slayt {num} Yapım Aşamasında</div> 
+    });
+  });
 });
 
 const PresentationShell: React.FC = () => {
